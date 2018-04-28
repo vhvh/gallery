@@ -1,9 +1,14 @@
+<?php
+  define('title','homework');
+  $linkImg = 'https://fakeimg.pl/300x180/';
+?>
+
 <!doctype html>
   <head>
-    <title>homework</title>
+    <title><?php echo title?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body>
+<body>
 
 <div class=containertxt>
   <h1>My Gallery</h1>
@@ -49,26 +54,23 @@
 
 
 
-<div class="container1">
-
-  <img class="photo" src=<?php echo 'https://fakeimg.pl/300x180/' ?>>
-  <img class="photo" src=<?php echo 'https://fakeimg.pl/300x180/' ?>>
-  <img class="photo" src=<?php echo 'https://fakeimg.pl/300x180/' ?>>
-  <img class="photo" src=<?php echo 'https://fakeimg.pl/300x180/' ?>>
-  <img class="photo" src=<?php echo 'https://fakeimg.pl/300x180/' ?>>
-  <img class="photo" src=<?php echo 'https://fakeimg.pl/300x180/' ?>>
-  <img class="photo" src=<?php echo 'https://fakeimg.pl/300x180/' ?>>
-  <img class="photo" src=<?php echo 'https://fakeimg.pl/300x180/' ?>>
-  <img class="photo" src=<?php echo 'https://fakeimg.pl/300x180/' ?>>
-
+<div class="photoContainer">
+  <img class="photo" src=<?php echo $linkImg ?>>
+  <img class="photo" src=<?php echo $linkImg ?>>
+  <img class="photo" src=<?php echo $linkImg ?>>
+  <img class="photo" src=<?php echo $linkImg ?>>
+  <img class="photo" src=<?php echo $linkImg ?>>
+  <img class="photo" src=<?php echo $linkImg ?>>
+  <img class="photo" src=<?php echo $linkImg ?>>
+  <img class="photo" src=<?php echo $linkImg ?>>
+  <img class="photo" src=<?php echo $linkImg ?>>
 </div>
 
 
 <style>
-
   @media screen and (max-width:374px)
   {
-    div.container1
+    div.photoContainer
     {
       display: none;
     }
@@ -99,7 +101,7 @@
         margin: 3%;
       }
 
-      div.container1
+      div.photoContainer
       {
       }
       div.K
@@ -155,7 +157,7 @@
         margin: 2%;
       }
 
-      div.container1
+      div.photoContainer
       {
       }
 
@@ -210,7 +212,7 @@
         margin: 1%;
       }
 
-      div.container1
+      div.photoContainer
       {
 
       }
@@ -264,7 +266,7 @@
         margin: 2%;
       }
 
-      div.container1
+      div.photoContainer
       {
       }
       div.K
@@ -319,7 +321,7 @@
         margin: 6%;
       }
 
-       div.container1
+       div.photoContainer
       {
       }
 
@@ -368,7 +370,7 @@
           margin-right: -50%;
           transform: translate(-50%, -50%)
         }
-        div.container1
+        div.photoContainer
        {
          display: none;
        }
@@ -406,13 +408,11 @@
     align: center;
 
    }
-   div.container1
+   div.photoContainer
    {
      text-align: center;
    }
-
-
 </style>
 
-  </body>
+</body>
 </html>
