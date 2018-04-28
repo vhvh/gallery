@@ -1,6 +1,7 @@
 <?php
-  define('title','homework');
-  $linkImg = 'https://fakeimg.pl/300x180/';
+  require 'classes/Curl.php';
+  $linkImg
+  
 ?>
 
 <!doctype html>
