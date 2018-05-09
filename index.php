@@ -1,7 +1,7 @@
 <?php
   require 'classes/Curl.php';
   $linkImg
-  
+
 ?>
 
 <!doctype html>
@@ -14,6 +14,198 @@
 <div class=containertxt>
   <h1>My Gallery</h1>
 </div>
+<?php
+  require 'Curl.php';
+  $linkImg
+
+?>
+
+<!doctype html>
+  <head>
+    <title><?php echo title?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  </head>
+<body>
+
+<div class=containertxt>
+  <h1>My Gallery</h1>
+</div>
+
+
+
+<div class="photoContainer">
+  <?php for ($n=0; $n<9; $n++)
+  { //Select the rights and unique array, which I get from http://picsum.photos/list/(JSON). ?>
+    <div class = "container">
+      <a data-fancybox="gallery" href="<?php echo $linkImg[$n]['post_url'].'/download'  ?>">
+          <img class="photo" src="<?php echo $linkImg[$n]['post_url'].'/download' //output image url via unique array from selected key?>">
+      </a>
+        <p>Author: <a href="<?php echo $linkImg[$n]['author_url'] ?>">  <?php echo $linkImg[$n]['author']// the same array output another data from another key ?></a></p>
+        <p> Original resolution: <?php echo $linkImg[$n]['width'].'x'.$linkImg[$n]['height']?>
+  </div>
+<?php  } ?>
+
+</div>
+
+
+
+<style>
+.photo
+{
+width: 300px;
+height: 180px;
+}
+.container
+{
+margin: 2%;
+  width: 300px;
+  float: left;
+}
+
+div.photoContainer
+{
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+  @media screen and (max-width:374px)
+  {
+
+  }
+
+
+  /* K */
+  @media screen and (min-width: 1441px)
+  {
+    div.containertxt
+    {
+      height: 10em;
+      position: relative
+    }
+  }
+
+
+  /* Laptop L */
+  @media screen and (min-width: 1023px) and (max-width: 1440px)
+  {
+
+    div.containertxt
+    {
+      height: 10em;
+      position: relative
+    }
+
+    div.containertxt h1
+    {
+      font-size: 4em;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%)
+     }
+   }
+
+   /* Laptop */
+  @media screen and (min-width: 769px) and (max-width: 1024px)
+  {
+    div.containertxt
+    {
+      height: 10em;
+      position: relative
+    }
+
+    div.containertxt h1
+    {
+      font-size: 3em;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%)
+    }
+  }
+
+
+
+
+  /* tablet */
+  @media screen and (min-width: 424px) and (max-width: 768px)
+  {
+    div.containertxt
+    {
+      height: 10em;
+      position: relative
+    }
+    div.containertxt h1
+    {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%)
+    }
+  }
+
+
+
+   /* mobile L */
+   @media screen and (min-width: 376px) and (max-width: 425px)
+   {
+
+     div.containertxt
+     {
+       height: 10em;
+       position: relative
+     }
+
+     div.containertxt h1
+     {
+       margin: 0;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       margin-right: -50%;
+       transform: translate(-50%, -50%)
+     }
+}
+
+
+        /*other*/
+      @media screen and (min-width: 100px) and (max-width: 375px)
+      {
+
+        div.containertxt
+        {
+          height: 10em;
+          position: relative
+        }
+
+        div.containertxt h1
+        {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-right: -50%;
+          transform: translate(-50%, -50%)
+        }
+
+
+   }
+
+</style>
+
+</body>
+</html>
 
 <div class="useragent">
   <div class="K">
